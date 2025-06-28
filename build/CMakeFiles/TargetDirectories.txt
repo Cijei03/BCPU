@@ -1,3 +1,0 @@
-/home/workstation/github/BCPU/build/CMakeFiles/bcpu.dir
-/home/workstation/github/BCPU/build/CMakeFiles/edit_cache.dir
-/home/workstation/github/BCPU/build/CMakeFiles/rebuild_cache.dir

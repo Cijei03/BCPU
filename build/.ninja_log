@@ -1,0 +1,11 @@
+# ninja log v6
+2	25	1751134852059987442	/home/workstation/github/BCPU/build/cmake_install.cmake	99f42f2309645518
+2	25	1751134852060407846	build.ninja	99f42f2309645518
+1	4599	1751134171975260433	CMakeFiles/bcpu.dir/sources/info_linux.cpp.o	752694afa65c7c77
+1	7530	1751134171974975087	CMakeFiles/bcpu.dir/sources/app_core.cpp.o	ddf6c32a235d6b2c
+7531	7586	1751134179505282207	bcpu	e75df567db28ceb7
+1	47	1751134852060407846	build.ninja	99f42f2309645518
+1	47	1751134852060407846	/home/workstation/github/BCPU/build/cmake_install.cmake	99f42f2309645518
+1	4494	1751134852089790825	CMakeFiles/bcpu.dir/sources/info_linux.cpp.o	dd100d3ddf73e8e3
+1	7335	1751134852088135049	CMakeFiles/bcpu.dir/sources/app_core.cpp.o	16ce0b430acff1be
+7335	7472	1751134859422155950	bcpu	e75df567db28ceb7

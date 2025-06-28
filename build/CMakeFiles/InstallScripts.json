@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/workstation/github/BCPU/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

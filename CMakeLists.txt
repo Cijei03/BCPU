@@ -14,6 +14,7 @@ target_sources(${PROJECT_NAME} PRIVATE
 	"sources/app_core.cpp"
 	"sources/info_linux.cpp"
 	"sources/info_winnt.cpp"
+	"sources/info_macos.cpp"
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE 

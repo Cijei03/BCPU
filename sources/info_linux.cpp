@@ -1,7 +1,8 @@
-#ifdef __linux__
-	#include "info.hpp"
-	#include <regex>
-	#include <fstream>
+#ifndef __ANDROID__
+	#ifdef __linux__
+		#include "info.hpp"
+		#include <regex>
+		#include <fstream>
 
 std::string GetCPUName()
 {
@@ -43,4 +44,5 @@ std::string GetOSRelease()
 
 	return "";
 }
+	#endif
 #endif

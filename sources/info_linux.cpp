@@ -1,6 +1,6 @@
-#ifndef __ANDROID__
+//#ifndef __ANDROID__
 	#ifdef __linux__
-		#include "info.hpp"
+		#include "lib_core.hpp"
 		#include <regex>
 		#include <fstream>
 
@@ -45,4 +45,4 @@ std::string GetOSRelease()
 	return "";
 }
 	#endif
-#endif
+//#endif

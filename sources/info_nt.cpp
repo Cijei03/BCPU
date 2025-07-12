@@ -1,6 +1,6 @@
 #ifdef _WIN64
 	#include "lib_core.hpp"
-	#include <Windows.h>
+	#include <windows.h>
 	#include <fstream>
 	#include <regex>
 	#include <sstream>
@@ -11,7 +11,7 @@ std::string GetCPUName()
 {
 	DWORD DataSize = 50;
 	char CPUName[50]{};
-	RegGetValueA(HKEY_LOCAL_MACHINE, "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0", "ProcessorNameString", RRF_RT_REG_SZ, NULL, CPUName, &DataSize);
+	RegGetValueA(HKEY_LOCAL_MACHINE, "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0", "ProcessorNameString", RRF_RT_REG_SZ, nullptr, CPUName, &DataSize);
 	return std::string(const_cast<const char*>(CPUName));
 }
 std::string GetOSRelease()

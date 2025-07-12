@@ -1,0 +1,6 @@
+set(CMAKE_SYSTEM_NAME Windows)
+set(CMAKE_C_COMPILER gcc)
+set(CMAKE_CXX_COMPILER g++)
+add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
+set(CMAKE_FIND_ROOT_PATH "C:/Program Files (x86)/Windows Kits/10")
+link_libraries(stdc++exp)

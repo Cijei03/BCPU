@@ -1,5 +1,5 @@
 #ifdef __APPLE__
-	#include "info.hpp"
+	#include "lib_core.hpp"
 	#include <regex>
 	#include <fstream>
 

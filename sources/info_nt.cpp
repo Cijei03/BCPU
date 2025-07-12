@@ -1,32 +1,18 @@
 #ifdef _WIN64
-	#include "info.hpp"
-	//#include <Windows.h>
-	#include <intrin.h>
+	#include "lib_core.hpp"
+	#include <Windows.h>
 	#include <fstream>
 	#include <regex>
 	#include <sstream>
 	#include <iostream>
+	#include <print>
 
 std::string GetCPUName()
 {
-	int PackedCPUInfo[4] = { -1 };
-	unsigned nExIds, i = 0;
-	__cpuid(PackedCPUInfo, 0x80000000);
-	nExIds = PackedCPUInfo[0];
-    char CPUBrandString[0x40]{};
-    for (i = 0x80000000; i <= nExIds; ++i)
-    {
-    	__cpuid(PackedCPUInfo, i);
-		
-        if (i == 0x80000002)
-        	memcpy(CPUBrandString, PackedCPUInfo, sizeof(PackedCPUInfo));
-    	else if (i == 0x80000003)
-            memcpy(CPUBrandString + 16, PackedCPUInfo, sizeof(PackedCPUInfo));
-        else if (i == 0x80000004)
-            memcpy(CPUBrandString + 32, PackedCPUInfo, sizeof(PackedCPUInfo));
-    }
-
-	return std::string(CPUBrandString);
+	DWORD DataSize = 50;
+	char CPUName[50]{};
+	RegGetValueA(HKEY_LOCAL_MACHINE, "HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0", "ProcessorNameString", RRF_RT_REG_SZ, NULL, CPUName, &DataSize);
+	return std::string(const_cast<const char*>(CPUName));
 }
 std::string GetOSRelease()
 {

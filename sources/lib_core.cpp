@@ -16,11 +16,11 @@ uint64_t Points = 0;
 void Work()
 {
 	uint64_t OperationsCount = 0;
-	glm::mat4 Cache;
+	glm::mat4 Cache(1.0f);
 
 	while (BenchInProgress.load())
 	{
-		for (uint64_t i = 0; i < UINT32_MAX; i++)
+		for (uint64_t i = 0; i < UINT8_MAX && BenchInProgress.load(); i++)
 		{
 			Cache = glm::rotate(Cache, 35.0f, glm::vec3(1.0f, 0.5f, 0.3f));
 		}
@@ -56,7 +56,7 @@ void PerformBenching()
 
 	while (ThreadsFinished.load() < HardwareCount);
 
-	Points = static_cast<uint64_t>(static_cast<double>(GlobalOperationsCount.load(std::memory_order_relaxed)) * 0.00000001);
+	Points = static_cast<uint64_t>(static_cast<double>(GlobalOperationsCount.load(std::memory_order_relaxed)) * 0.000001);
 }
 uint64_t GetConcurrency()
 {
